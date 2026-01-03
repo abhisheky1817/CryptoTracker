@@ -1,6 +1,5 @@
 
 import Banner from "./Components/Banner/Banner"
-import UseEffectExample2 from "./Components/UseEffectExample/useEffectExample2"
 
 function App() {
 
@@ -8,7 +7,6 @@ function App() {
     <>
     
     <Banner />
-      <UseEffectExample2 />
 
     </>
   )
