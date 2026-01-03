@@ -2,7 +2,6 @@ import { useEffect } from "react";
 
 function UseEffectExample() {
 
-     const  [count, setCount] = useState(0);
     async function download() {
         const response = await fetch("https://jsonplaceholder.typicode.com/todos/1");
 
