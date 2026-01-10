@@ -20,7 +20,7 @@ function useEffectExample2() {
         useEffect(() => {
 
             download();
-        }, [count]); // empty dependency array means this effect runs once on mount
+        }, [count]); // runs when 'count' changes
 
         useEffect(() => {
             console.log("Flag value changed:", flag);
@@ -30,13 +30,14 @@ function useEffectExample2() {
             console.log("Component mounted");   
         }, []); // runs once on mount
         
-        //now on both change of count and flag
+        
         useEffect(() => {
             console.log("Count or Flag changed:", count, flag);
-        }, [count, flag]);
+        }, [count, flag]); // runs when either 'count' or 'flag' changes
 
+        //why we call download in only one useEffect?
+        //because we want to fetch data only when the component mounts or when count changes, not on every render
         
-
 
     return(
         <>
@@ -57,4 +58,3 @@ function useEffectExample2() {
 
 export default useEffectExample2;
 
-//
